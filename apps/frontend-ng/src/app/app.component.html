@@ -1,0 +1,43 @@
+<h1> {{title}} Events </h1>
+<div>
+  <p>
+    <label [htmlFor]="newEvent.name">name</label><br>
+    <input [(ngModel)]="newEvent.name" />
+    <input type="text" value="{{title}}" />
+  </p>
+  <p>
+    <label [htmlFor]="newEvent.description">description</label><br>
+    <input [(ngModel)]="newEvent.description" />
+  </p>
+  <p>
+    <label [htmlFor]="newEvent.date">date</label><br>
+    <input [(ngModel)]="newEvent.date" />
+  </p>
+  <button (click)="addItem(newEvent)">Add event</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Participants</th>
+      <th>Total Spent</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (event of events; track event.id) {
+    <tr>
+      <td>{{event.id}}</td>
+      <td>{{event.date}}</td>
+      <td>{{event.name}}</td>
+      <td>{{event.description}}</td>
+      <td>{{event.totalParticipants}}</td>
+      <td>{{event.totalSpent}}</td>
+      <td>{{event.status}}</td>
+    </tr>
+    }
+  </tbody>
+</table>

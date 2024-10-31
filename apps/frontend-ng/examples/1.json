@@ -1,0 +1,25 @@
+// event
+{
+    "id": "uuid",
+    "name": "string",
+    "date": "2024-10-10",
+    "totalSpent": 1234.00
+}
+// spender
+{
+    "id": "uuid",
+    "name": "string",
+}
+// expense
+{
+    "id": "uuid",
+    "eventId": "uuid",
+    "spenderId": "uuid",
+    "name": "string",
+    "description": "string",
+    "amount": 1234.00,
+    "totalGuests": 2,
+    "receipt": "path-to-file"
+}
+// expense history
+{}

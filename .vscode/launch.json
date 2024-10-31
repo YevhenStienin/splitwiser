@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Server",
+      "port": 9229,
+      "restart": true,
+      "request": "attach",
+      "type": "node",
+      "cwd": "${workspaceFolder}/apps/backend"
+    },
+    {
+      "name": "Run Backend",
+      // "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "nx",
+      "runtimeArgs": ["run", "backend:serve:development"],
+      "outputCapture": "std",
+      "internalConsoleOptions": "openOnSessionStart",
+      "autoAttachChildProcesses": true,
+      "console": "integratedTerminal"
+    }
+  ]
+}
